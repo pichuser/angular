@@ -20,7 +20,7 @@ import {Subscription} from 'rxjs/Subscription';
 const isAbsoluteUrl = /^[a-zA-Z\-\+.]+:\/\//;
 
 function validateRequestUrl(url: string): void {
-  url = `http://localhost/${url}`;
+  url = `http://localhost:8080/${url}`;
   if (!isAbsoluteUrl.test(url)) {
     throw new Error(`URLs requested via Http on the server must be absolute. URL: ${url}`);
   }
